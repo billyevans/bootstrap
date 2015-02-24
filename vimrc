@@ -11,6 +11,7 @@ set softtabstop=4
 set nowrap
 set autoindent
 set smartindent
+set cindent
 
 set nu
 set showcmd
@@ -37,7 +38,7 @@ let cpp_space_errors = 1
 
 au BufRead,BufNewFile *.I set filetype=cpp
 au BufRead SConstruct setfiletype python
-
+filetype plugin on
 
 " fix c++-lambda scope
 hi link cErrInParen Normal
