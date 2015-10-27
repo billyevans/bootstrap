@@ -3,7 +3,7 @@
 DIR=`pwd`
 
 # dotfiles
-for f in vim vimrc profile bashrc gitconfig inputrc
+for f in vim vimrc profile bashrc gitconfig inputrc pylintrc
 do
 	ln -s $DIR/$f ~/.$f
 done
