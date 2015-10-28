@@ -3,7 +3,7 @@
 DIR=`pwd`
 
 # dotfiles
-for f in vim vimrc profile bashrc gitconfig inputrc pylintrc
+for f in vim vimrc profile bashrc gitconfig inputrc pylintrc tmux.conf
 do
 	ln -s $DIR/$f ~/.$f
 done
