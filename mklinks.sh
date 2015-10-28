@@ -26,5 +26,6 @@ fi
 
 mkdir -p ~/.ssh/
 ln -s $DIR/ssh/config ~/.ssh/config
+ln -s $DIR/ssh/rc ~/.ssh/rc
 
 
