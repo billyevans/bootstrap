@@ -14,7 +14,8 @@ set autoindent
 set smartindent
 set cindent
 
-set nu
+" set relativenumber
+set number
 set showcmd
 set foldmethod=indent
 set foldcolumn=2
