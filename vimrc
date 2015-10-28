@@ -20,7 +20,7 @@ set foldmethod=indent
 set foldcolumn=2
 set foldlevel=30
 set incsearch
-"set hlsearch " highlight all matches
+" set hlsearch " highlight all matches
 set cursorline
 set bg=dark
 set t_Co=256
@@ -70,8 +70,6 @@ set tags+=~/.vim/systags
 "set tags+=~/.vim/ctags.rust
 
 imap >Ins> <Esc>i
-"let xterm16_brightness='default'     " Change if needed 
-"let xterm16_colormap='allblue'      " Change if needed 
 
 set viminfo='10,\"100,:20,%,n~/.viminfo
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
