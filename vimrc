@@ -50,7 +50,7 @@ autocmd VimEnter * set vb t_vb=
 ""tabbar settings
 let g:tagbar_left = 1
 "autocmd FileType c,cpp,pl,py nested :TagbarOpen
-autocmd VimEnter * nested :call tagbar#autoopen()
+"autocmd VimEnter * nested :call tagbar#autoopen()
 "autocmd FileType * nested :call tagbar#autoopen()
 let g:tagbar_autofocus = 0
 let g:tagbar_compact = 1
@@ -116,7 +116,7 @@ nmap <F11> :TagbarToggle<CR>
 " Open tag under cursor in new tab
 map <C-W>] <C-W>]:tab split<CR>gT:q<CR>gt
 
- map <F3> :vimgrep /FIXME\\|TODO/j *.[py,c,cc,pl]<CR>:cw<CR>
+map <F3> :vimgrep /FIXME\\|TODO/j *.[py,c,cc,pl]<CR>:cw<CR>
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -159,4 +159,12 @@ set complete+=k
 set complete+=b
 set completeopt-=preview
 set completeopt+=longest
+
+map ^[[D <Nop>
+map ^[[C <Nop>
+" tmux hack
+map ^[[5;5~ <C-PageUp>
+map ^[[6;5~ <C-PageDown>
+map ^[[5~ <PageUp>
+map ^[[6~ <PageDown>
 
