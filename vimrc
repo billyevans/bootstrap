@@ -80,9 +80,9 @@ let g:molokai_original=0
 "colo xterm16
 "colo zenburn
 let g:lucius_style='dark'
-"colo lucius
+colo lucius
 "colo molokai
-colo seti
+"colo seti
 
 function SMap(key, action, ...)
 	let modes = " vi"
