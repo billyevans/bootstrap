@@ -14,7 +14,7 @@ if [ -f "$HOME/git-magic.sh" ]; then
 	. ~/git-magic.sh
 fi
 
-export PATH="/Users/alp/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 export CLASSPATH=$CLASSPATH:~/algs4/stdlib.jar:~/algs4/algs4.jar
 
 alias tmux='TERM=xterm-256color tmux'
