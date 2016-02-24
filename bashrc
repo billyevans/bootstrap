@@ -22,3 +22,7 @@ alias tmux='TERM=xterm-256color tmux'
 if [ -f "/usr/local/bin/aws_completer" ]; then
 	complete -C '/usr/local/bin/aws_completer' aws
 fi
+
+if [ -f "/usr/local/etc/bash_completion" ]; then
+	. /usr/local/etc/bash_completion
+fi
