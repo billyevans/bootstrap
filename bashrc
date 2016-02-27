@@ -16,6 +16,7 @@ fi
 
 export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 export CLASSPATH=$CLASSPATH:~/algs4/stdlib.jar:~/algs4/algs4.jar
+export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
 
 alias tmux='TERM=xterm-256color tmux'
 
