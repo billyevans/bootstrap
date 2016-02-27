@@ -76,10 +76,10 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 
-let g:molokai_original=0
+"let g:molokai_original=0
 "colo xterm16
 "colo zenburn
-let g:lucius_style='dark'
+let g:lucius_style='light'
 colo lucius
 "colo molokai
 "colo seti
