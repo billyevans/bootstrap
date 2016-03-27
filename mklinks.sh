@@ -25,7 +25,9 @@ fi
 
 
 mkdir -p ~/.ssh/
+mkdir -p ~/.config/fish
+
 ln -s $DIR/ssh/config ~/.ssh/config
 ln -s $DIR/ssh/rc ~/.ssh/rc
-
+ln -s $DIR/config/fish/config.fish ~/.config/fish
 
