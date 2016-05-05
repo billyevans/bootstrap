@@ -79,7 +79,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 let g:molokai_original=0
 "colo xterm16
 "colo zenburn
-let g:lucius_style='dark'
+let g:lucius_style='light'
 colo lucius
 "colo molokai
 
