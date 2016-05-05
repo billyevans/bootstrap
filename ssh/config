@@ -1,2 +1,5 @@
 Host *
 	ForwardAgent yes
+Host personalid
+ HostName bitbucket.org
+ IdentityFile ~/.ssh/personalid
