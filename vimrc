@@ -48,6 +48,8 @@ hi link cErrInParen Normal
 autocmd VimEnter * set vb t_vb= 
 
 
+execute pathogen#infect()
+
 ""tabbar settings
 let g:tagbar_left = 1
 "autocmd FileType c,cpp,pl,py nested :TagbarOpen
