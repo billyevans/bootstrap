@@ -12,11 +12,13 @@ set -x LC_ALL en_US.UTF-8
 set -x PATH $HOME/.cargo/bin /usr/local/sbin /usr/local/bin $PATH
 
 set -x CLASSPATH $CLASSPATH ~/algs4/stdlib.jar ~/algs4/algs4.jar
+set -x GOPATH $HOME/src/goprojects
+
 set -U OPENSSL_INCLUDE_DIR /usr/local/opt/openssl/include
 set -x FONTCONFIG_PATH /opt/X11/lib/X11/fontconfig
 
 alias tmux='TERM=xterm-256color tmux'
-
+alias weather='curl http://wttr.in/london'
 
 set -U fish_color_user 62A -o
 set -U fish_color_host green -o
