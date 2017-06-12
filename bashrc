@@ -10,8 +10,8 @@ export LC_ALL=en_US.UTF-8
 PS1='\[\e[1;34m\]\u\[\e[0;39m\]@\[\e[1;32m\]\h\[\e[0;39m\]:\[\e[1;31m\]\w\[\e[0;39m\]$ '
 
 
-if [ -f "$HOME/git-magic.sh" ]; then
-	. ~/git-magic.sh
+if [ -e "/etc/bash.bashrc.d/yelpdev.sh" ]; then
+	. /etc/bash.bashrc.d/yelpdev.sh
 	PS1='\[\e[1;34m\]\u\[\e[0;39m\]@\[\e[1;32m\]\h\[\e[0;39m\]:\[\e[1;31m\]\w\[\e[0;39m\]$(__git_ps1_yelp " \[\e[1;36m\](%s)\[\e[0;39m\] ")\$ '
 fi
 
@@ -28,3 +28,27 @@ fi
 if [ -f "/usr/local/etc/bash_completion" ]; then
 	. /usr/local/etc/bash_completion
 fi
+
+ssh_to_aws() {
+    instance_id=$1
+    accounts="dev prod"
+    regions="us-west-1 us-west-2 us-east-1"
+    ip_address=''
+    for account in $accounts; do
+        for region in $regions; do
+            json=$(aws --profile $account --region $region ec2 describe-instances --instance-id $instance_id 2>/dev/null)
+            if [ $? -eq 0 ]; then
+                ip_address=$( echo $json | jq -r .Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddress )
+                echo "Found $ip_address in $region $account"
+                break
+            fi
+        done
+        if [ -n "$ip_address" ]; then
+            break
+        fi
+    done
+    if [ -n $ip_address ]; then
+        echo "SSHing to $ip_address"
+        ssh -A $ip_address
+    fi
+}
