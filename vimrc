@@ -41,6 +41,7 @@ let cpp_space_errors = 1
 au BufRead,BufNewFile *.I set filetype=cpp
 au BufRead SConstruct setfiletype python
 filetype plugin on
+filetype plugin indent on
 
 " fix c++-lambda scope
 hi link cErrInParen Normal
