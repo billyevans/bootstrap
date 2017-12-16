@@ -14,6 +14,21 @@ set autoindent
 set smartindent
 set cindent
 
+
+" new opts
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+set laststatus=2
+set ruler
+set wildmenu
+set autoread
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+	set t_Co=16
+endif
+
 " set relativenumber
 set number
 set showcmd
