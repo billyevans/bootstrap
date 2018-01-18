@@ -1,5 +1,7 @@
 Host *
 	ForwardAgent yes
+	AddKeysToAgent yes
+	UseKeychain yes
 Host personalid
- HostName bitbucket.org
- IdentityFile ~/.ssh/personalid
+	HostName bitbucket.org
+	IdentityFile ~/.ssh/personalid
