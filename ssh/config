@@ -2,6 +2,7 @@ Host *
 	ForwardAgent yes
 	AddKeysToAgent yes
 	UseKeychain yes
+	SendEnv LANG LC_* TERM_PROGRAM TERM_PROGRAM_VERSION COLORTERM
 Host personalid
 	HostName bitbucket.org
 	IdentityFile ~/.ssh/personalid
