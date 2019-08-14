@@ -188,3 +188,6 @@ map ^[[6;5~ <C-PageDown>
 map ^[[5~ <PageUp>
 map ^[[6~ <PageDown>
 
+" Silence go file-plugin
+let g:go_version_warning = 0
+
