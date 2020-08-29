@@ -53,6 +53,8 @@ set list lcs=tab:\|\ ,trail:·,precedes:<,extends:>,nbsp:·
 let c_space_errors = 1
 let cpp_space_errors = 1
 
+let g:airline#extensions#tabline#enabled = 1
+
 au BufRead,BufNewFile *.I set filetype=cpp
 au BufRead SConstruct setfiletype python
 filetype plugin on

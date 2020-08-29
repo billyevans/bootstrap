@@ -10,3 +10,9 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/bundle/idris-vim"]
+	path = vim/bundle/idris-vim
+	url = https://github.com/idris-hackers/idris-vim.git
