@@ -193,3 +193,4 @@ map ^[[6~ <PageDown>
 " Silence go file-plugin
 let g:go_version_warning = 0
 
+set rtp+=/usr/local/opt/fzf

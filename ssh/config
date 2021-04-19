@@ -1,8 +1,16 @@
+Include /Users/apervushin/src/devops/tools/ssh/config/*.conf
+Include /Users/apervushin/.ssh/jumpbox-for-ip.conf
 Host *
 	ForwardAgent yes
 	AddKeysToAgent yes
 	UseKeychain yes
 	SendEnv LANG LC_* TERM_PROGRAM TERM_PROGRAM_VERSION COLORTERM
+	IdentityFile ~/.ssh/id_rsa
 Host personalid
 	HostName bitbucket.org
 	IdentityFile ~/.ssh/personalid
+
+Host github.com
+	HostName github.com
+	User billyevans
+	IdentityFile ~/.ssh/id_rsa
