@@ -8,6 +8,59 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+HISTSIZE=1000000
+HISTFILESIZE=20000000
+
+VISUAL=vim
+EDITOR=vim
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+acolor() {
+  [[ -n $(git status --porcelain=v2 2>/dev/null) ]] && echo 35 || echo 33
+}
+
+k1pod() {
+  kubectl get pod | grep $1 | head -n 1 | awk '{print $1}'
+}
+
+kpods() {
+  if [ $# -eq 0 ]; then
+    kubectl get pods | fzf | awk '{print $1}'
+  else
+    kubectl get pods | grep $1 | fzf | awk '{print $1}'
+  fi
+}
+
+kbash() {
+  PODNAME=`kpods $1`
+  [ ! -z "$PODNAME" ] && kubectl exec -it $PODNAME -- bash
+}
+
+ksh() {
+  PODNAME=`kpods $1`
+  [ ! -z "$PODNAME" ] && kubectl exec -it $PODNAME -- sh
+}
+
+# alias vi=nvim
+# alias vim=nvim
+alias k='kubectl'
+alias kubebug="kubectl exec --stdin --tty  "$(kubectl get pods | grep "carnet-debug-pod" | awk '{print $1;}')" -- /bin/bash"
+alias tmux='TERM=xterm-256color tmux2'
+alias now='date +%s'
+alias fuzzy="fd . -t f | fzf"
+alias ge="egrep -i 'warn|error|stop|$'"
+
+
+export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export CLASSPATH=$CLASSPATH:~/algs4/stdlib.jar:~/algs4/algs4.jar
+
+[[ -s "$HOME/.tsla_profile" ]] && source "$HOME/.tsla_profile"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -21,4 +74,3 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"

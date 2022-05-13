@@ -1,6 +1,6 @@
 {
-	"color_scheme": "Packages/Theme - Nil/Sanakan.tmTheme",
-	"font_face": "PT Mono",
+	"color_scheme": "Packages/Color Scheme - Default/Breakers.sublime-color-scheme",
+	"font_face": "Cascadia",
 	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -10,7 +10,7 @@
 		"Vintage"
 	],
 	"tab_size": 4,
-	"theme": "Higuchi.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": false,
-	"word_wrap": "false"
+	"word_wrap": "false",
 }
