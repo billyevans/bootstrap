@@ -49,14 +49,13 @@ ksh() {
 # alias vi=nvim
 # alias vim=nvim
 alias k='kubectl'
-alias kubebug="kubectl exec --stdin --tty  "$(kubectl get pods | grep "carnet-debug-pod" | awk '{print $1;}')" -- /bin/bash"
 alias tmux='TERM=xterm-256color tmux2'
 alias now='date +%s'
 alias fuzzy="fd . -t f | fzf"
 alias ge="egrep -i 'warn|error|stop|$'"
 
-
 export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export CLASSPATH=$CLASSPATH:~/algs4/stdlib.jar:~/algs4/algs4.jar
 
 [[ -s "$HOME/.tsla_profile" ]] && source "$HOME/.tsla_profile"
@@ -74,3 +73,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+. "$HOME/.cargo/env"

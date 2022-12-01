@@ -102,7 +102,8 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 "let g:lucius_style='light'
 "colo lucius
 "colo molokai
-colo seti
+" colo seti
+colo gruvbox
 
 function SMap(key, action, ...)
 	let modes = " vi"
