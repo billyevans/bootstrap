@@ -53,7 +53,6 @@ set list lcs=tab:\|\ ,trail:·,precedes:<,extends:>,nbsp:·
 let c_space_errors = 1
 let cpp_space_errors = 1
 
-let g:airline#extensions#tabline#enabled = 1
 
 au BufRead,BufNewFile *.I set filetype=cpp
 au BufRead SConstruct setfiletype python
@@ -65,8 +64,7 @@ hi link cErrInParen Normal
 " no beep
 autocmd VimEnter * set vb t_vb= 
 
-
-execute pathogen#infect()
+let g:airline#extensions#tabline#enabled = 1
 
 ""tabbar settings
 let g:tagbar_left = 1

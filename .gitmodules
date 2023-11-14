@@ -1,18 +1,21 @@
-[submodule "vim/bundle/vim-terraform"]
-	path = vim/bundle/vim-terraform
-	url = https://github.com/hashivim/vim-terraform.git
-[submodule "vim/bundle/seti.vim"]
-	path = vim/bundle/seti.vim
-	url = https://github.com/trusktr/seti.vim
-[submodule "vim/bundle/puppet"]
-	path = vim/bundle/puppet
-	url = git://github.com/rodjek/vim-puppet.git
-[submodule "vim/bundle/rust.vim"]
-	path = vim/bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
 [submodule "vim/bundle/idris-vim"]
 	path = vim/bundle/idris-vim
 	url = https://github.com/idris-hackers/idris-vim.git
+[submodule "vim/pack/vendor/start/vim-terraform"]
+	path = vim/pack/vendor/start/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git
+[submodule "vim/pack/vendor/start/vim-airline"]
+	path = vim/pack/vendor/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule "vim/pack/vendor/tagbar"]
+	path = vim/pack/vendor/tagbar
+	url = git@github.com:preservim/tagbar.git
+[submodule "vim/pack/vendor/opt/tagbar"]
+	path = vim/pack/vendor/opt/tagbar
+	url = git@github.com:preservim/tagbar.git
+[submodule "vim/pack/vendor/start/rust.vim"]
+	path = vim/pack/vendor/start/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
+[submodule "vim/pack/vendor/start/seti.vim"]
+	path = vim/pack/vendor/start/seti.vim
+	url = git@github.com:trusktr/seti.vim.git
