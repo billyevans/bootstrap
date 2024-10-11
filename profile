@@ -41,6 +41,11 @@ kbash() {
   [ ! -z "$PODNAME" ] && kubectl exec -it $PODNAME -- bash
 }
 
+krails() {
+  PODNAME=`kpods $1`
+  [ ! -z "$PODNAME" ] && kubectl exec -it $PODNAME -- rails c
+}
+
 ksh() {
   PODNAME=`kpods $1`
   [ ! -z "$PODNAME" ] && kubectl exec -it $PODNAME -- sh

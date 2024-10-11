@@ -120,3 +120,4 @@ bindkey "\e[G"  history-beginning-search-forward
 bindkey "\er"   history-beginning-search-backward
 bindkey "\es"   history-beginning-search-forward
 
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
