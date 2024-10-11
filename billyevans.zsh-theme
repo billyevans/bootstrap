@@ -19,7 +19,8 @@ function afmagic_dashes {
 
 # primary prompt: dashed separator, directory and vcs info
 PS1="%B${FG[237]}\${(l.\$(afmagic_dashes)..-.)}%{$reset_color%}
-%B${FG[201]}[%~]\$(git_prompt_info)\$(hg_prompt_info)${FG[105]}%(!.#.$)%{$reset_color%} "
+%B%F{magenta}[%~] \$(git_prompt_info)\$(hg_prompt_info)%F{green}%(!.#.$)%{$reset_color%}
+"
 PS2="%{$fg[red]%}\ %{$reset_color%}"
 
 # right prompt: return code, virtualenv and context (user@host)
