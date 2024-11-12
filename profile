@@ -59,9 +59,12 @@ alias now='date +%s'
 alias fuzzy="fd . -t f | fzf"
 alias ge="egrep -i 'warn|error|stop|$'"
 
-export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/opt/homebrew/bin:$PATH"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export CLASSPATH=$CLASSPATH:~/algs4/stdlib.jar:~/algs4/algs4.jar
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 [[ -s "$HOME/.tsla_profile" ]] && source "$HOME/.tsla_profile"
 
