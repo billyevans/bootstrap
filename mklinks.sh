@@ -26,8 +26,9 @@ fi
 
 mkdir -p ~/.ssh/
 mkdir -p ~/.config/fish
+mkdir -p ~/.oh-my-zsh/themes
 
 ln -s $DIR/ssh/config ~/.ssh/config
 ln -s $DIR/ssh/rc ~/.ssh/rc
 ln -s $DIR/config/fish/config.fish ~/.config/fish
-
+ln -s $DIR/oh-my-zsh/themes/billyevans.zsh-theme ~/.oh-my-zsh/themes/billyevans.zsh-theme
