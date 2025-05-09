@@ -122,4 +122,4 @@ bindkey "\es"   history-beginning-search-forward
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-source /Users/alexeypervushin/.config/broot/launcher/bash/br
+source /Users/apervushin/.config/broot/launcher/bash/br

@@ -1,8 +1,23 @@
 [user]
-	name = billyevans
-	email = pervushinai@gmail.com
+	name = Alexey Pervushin
+	email = apervushin@tesla.com
 [core]
 	editor = vim
+	pager = 
 [merge]
 	tool = vimdiff
-
+[url "ssh://git@github-fw.tesla.com"]
+	insteadOf = https://github-fw.tesla.com
+[url "ssh://git@github.tesla.com"]
+	insteadOf = https://github.tesla.com
+[pull]
+	rebase = false
+[url "ssh://git@github.tesla.com/"]
+	insteadOf = https://github.tesla.com/
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	followTags = true

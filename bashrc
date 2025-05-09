@@ -11,3 +11,5 @@ fi
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 source /Users/alexeypervushin/.config/broot/launcher/bash/br
+
+source /Users/apervushin/.config/broot/launcher/bash/br

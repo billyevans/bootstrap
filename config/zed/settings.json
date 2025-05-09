@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -27,10 +27,26 @@
       "format_on_save": "off"
     }
   },
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+    }
+  },
   "lsp": {
-    "solargraph": {
+    "rubocop": {
+      "settings": {
+        "use_bundler": false
+      }
+    },
+    "ruby-lsp": {
+      "settings": {
+        "use_bundler": true
+      },
       "initialization_options": {
-        "diagnostics": true
+        "enabledFeatures": {
+          // This disables diagnostics
+          "diagnostics": false
+        }
       }
     }
   }
