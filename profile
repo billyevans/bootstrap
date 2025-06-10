@@ -67,6 +67,7 @@ export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 [[ -s "$HOME/.tsla_profile" ]] && source "$HOME/.tsla_profile"
+[[ -s "$HOME/.config/broot/launcher/bash/br" ]] && source "$HOME/.config/broot/launcher/bash/br"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
